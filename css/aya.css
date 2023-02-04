@@ -1,0 +1,160 @@
+:root {
+ 
+    --primarycolor: hsl(0, 78%, 55%);
+   --secondarycolor: #dcf0fb;
+   --lightcolor: #ffffff;
+   --bgcolor-1: #171a1c;
+   --bgcolor-2: #22282a;
+   --padding: 8%;
+   }
+
+*{
+    padding: 0;
+    margin: 0;
+    
+
+}
+
+body{
+    background: linear-gradient(#111,#222);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+
+body::after{
+    content: '';
+    width: 100%;
+    height: 80%;
+    background:brown;
+    position:absolute;
+    z-index: -1;
+    clip-path: circle(50% at right 70%);
+    overflow: hidden;
+
+}
+
+span{
+    color: var(--primarycolor); 
+}
+
+
+.container{
+    width: 80%;
+    height: 65%;
+    background:rgb(255,255,255,0.1) ;
+    border-radius: 30px;
+    overflow: hidden;
+
+
+
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+nav a{
+    color:var(--lightcolor);
+    text-decoration: none;
+    font-size: 32px;
+    
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+.social{
+    margin-top: 2rem;
+}
+
+.social img{
+
+    margin:
+    width: 1rem;
+    transition: 0.6s;
+}
+
+.social img:hover{
+      transform: scale(1.2);
+}
+.social img{
+    margin: 15px 0;
+    position:relative;
+    bottom: -100px
+
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    height: 60%;
+    width: 20%;
+    margin:inherit;
+
+
+}
+
+.content .text{
+    color: #fff;
+    width: 20%;
+
+
+
+}
+
+.content .text p{
+    font-size: 20px;
+    line-height: 15px;
+    color: dimgrey;
+    position: absolute;
+    margin: 40px 40px;
+    letter-spacing: 1px;
+
+}
+
+.content .image{
+     width: 40%;
+
+}
+
+.content .image img{
+    width: 400px;
+
+}
+
+
+@media (min-width:950px) and (max-width:1150px){
+
+    .content .image img{
+        width: 200px;
+    
+    }
+
+}
+
+@media (max-width:950px){
+
+    .content ,nav{
+        flex-direction: column;
+        justify-content: center;
+
+
+    }
+    .content .image, .content .text{
+
+        width: 100%;
+
+    }
+    body::after{
+        clip-path:circle(40% at bottom)
+    }
+
+  
+}
